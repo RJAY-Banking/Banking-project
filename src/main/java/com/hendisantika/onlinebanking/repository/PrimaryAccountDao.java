@@ -1,7 +1,8 @@
 package com.hendisantika.onlinebanking.repository;
 
-import com.hendisantika.onlinebanking.entity.PrimaryAccount;
 import org.springframework.data.repository.CrudRepository;
+
+import com.hendisantika.onlinebanking.entity.PrimaryAccount;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,4 +17,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface PrimaryAccountDao extends CrudRepository<PrimaryAccount, Long> {
 
     PrimaryAccount findByAccountNumber(int accountNumber);
+    
+  
 }

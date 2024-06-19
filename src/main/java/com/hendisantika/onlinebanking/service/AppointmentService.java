@@ -1,6 +1,7 @@
 package com.hendisantika.onlinebanking.service;
 
 import com.hendisantika.onlinebanking.entity.Appointment;
+import com.hendisantika.onlinebanking.entity.User;
 
 import java.util.List;
 
@@ -23,4 +24,6 @@ public interface AppointmentService {
     Appointment findAppointment(Long id);
 
     void confirmAppointment(Long id);
+    
+    List<Appointment> findByUser(User user);
 }

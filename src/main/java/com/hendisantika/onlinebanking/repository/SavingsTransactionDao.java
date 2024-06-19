@@ -1,9 +1,10 @@
 package com.hendisantika.onlinebanking.repository;
 
-import com.hendisantika.onlinebanking.entity.SavingsTransaction;
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+import com.hendisantika.onlinebanking.entity.SavingsTransaction;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,4 +19,6 @@ import java.util.List;
 public interface SavingsTransactionDao extends CrudRepository<SavingsTransaction, Long> {
 
     List<SavingsTransaction> findAll();
+    
+
 }

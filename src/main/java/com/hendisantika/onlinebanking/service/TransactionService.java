@@ -1,13 +1,13 @@
 package com.hendisantika.onlinebanking.service;
 
+import java.security.Principal;
+import java.util.List;
+
 import com.hendisantika.onlinebanking.entity.PrimaryAccount;
 import com.hendisantika.onlinebanking.entity.PrimaryTransaction;
 import com.hendisantika.onlinebanking.entity.Recipient;
 import com.hendisantika.onlinebanking.entity.SavingsAccount;
 import com.hendisantika.onlinebanking.entity.SavingsTransaction;
-
-import java.security.Principal;
-import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -44,4 +44,5 @@ public interface TransactionService {
     void deleteRecipientByName(String recipientName);
 
     void toSomeoneElseTransfer(Recipient recipient, String accountType, String amount, PrimaryAccount primaryAccount, SavingsAccount savingsAccount);
+    
 }

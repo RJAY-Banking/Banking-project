@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank Statement</title>
+    <!-- Include common header if needed -->
+</head>
+<body>
+<div class="container">
+    <h2>Bank Statement</h2>
+
+    <h3>Primary Account Transactions</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="transaction : ${primaryTransactionList}">
+            <td th:text="${transaction.date}"></td>
+            <td th:text="${transaction.description}"></td>
+            <td th:text="${transaction.amount}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Savings Account Transactions</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="transaction : ${savingsTransactionList}">
+            <td th:text="${transaction.date}"></td>
+            <td th:text="${transaction.description}"></td>
+            <td th:text="${transaction.amount}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Include common footer scripts if needed -->
+</body>
+</html>

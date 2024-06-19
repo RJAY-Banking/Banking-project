@@ -1,7 +1,10 @@
 package com.hendisantika.onlinebanking.repository;
 
-import com.hendisantika.onlinebanking.entity.SavingsAccount;
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
+
+import com.hendisantika.onlinebanking.entity.SavingsAccount;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,4 +19,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface SavingsAccountDao extends CrudRepository<SavingsAccount, Long> {
 
     SavingsAccount findByAccountNumber(int accountNumber);
+    
 }

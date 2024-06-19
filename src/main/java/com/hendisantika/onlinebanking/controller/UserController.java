@@ -1,8 +1,7 @@
 package com.hendisantika.onlinebanking.controller;
 
-import com.hendisantika.onlinebanking.entity.User;
-import com.hendisantika.onlinebanking.service.UserService;
-import lombok.RequiredArgsConstructor;
+import java.security.Principal;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +9,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.security.Principal;
+import com.hendisantika.onlinebanking.entity.User;
+import com.hendisantika.onlinebanking.service.TransactionService;
+import com.hendisantika.onlinebanking.service.UserService;
+
+import lombok.RequiredArgsConstructor;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,6 +31,8 @@ import java.security.Principal;
 public class UserController {
 
     private final UserService userService;
+    
+    private final TransactionService transactionService;
 
     @GetMapping("/profile")
     public String profile(Principal principal, Model model) {
@@ -51,6 +56,7 @@ public class UserController {
 
         return "profile";
     }
+
 
 
 }

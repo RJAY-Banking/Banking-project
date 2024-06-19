@@ -1,22 +1,28 @@
 package com.hendisantika.onlinebanking.service.UserServiceImpl;
 
+import java.math.BigDecimal;
+import java.security.Principal;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
 import com.hendisantika.onlinebanking.entity.PrimaryAccount;
 import com.hendisantika.onlinebanking.entity.PrimaryTransaction;
 import com.hendisantika.onlinebanking.entity.Recipient;
 import com.hendisantika.onlinebanking.entity.SavingsAccount;
 import com.hendisantika.onlinebanking.entity.SavingsTransaction;
 import com.hendisantika.onlinebanking.entity.User;
-import com.hendisantika.onlinebanking.repository.*;
+import com.hendisantika.onlinebanking.repository.PrimaryAccountDao;
+import com.hendisantika.onlinebanking.repository.PrimaryTransactionDao;
+import com.hendisantika.onlinebanking.repository.RecipientDao;
+import com.hendisantika.onlinebanking.repository.SavingsAccountDao;
+import com.hendisantika.onlinebanking.repository.SavingsTransactionDao;
+import com.hendisantika.onlinebanking.repository.UserDao;
 import com.hendisantika.onlinebanking.service.TransactionService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-import java.security.Principal;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
 
 /**
  * Created by IntelliJ IDEA.
@@ -141,4 +147,8 @@ public class TransactionServiceImpl implements TransactionService {
             savingsTransactionDao.save(savingsTransaction);
         }
     }
+    
+    
+
+    
 }

@@ -1,12 +1,16 @@
 package com.hendisantika.onlinebanking.service.UserServiceImpl;
 
-import com.hendisantika.onlinebanking.entity.Appointment;
-import com.hendisantika.onlinebanking.repository.AppointmentDao;
-import com.hendisantika.onlinebanking.service.AppointmentService;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.hendisantika.onlinebanking.entity.Appointment;
+import com.hendisantika.onlinebanking.entity.User;
+import com.hendisantika.onlinebanking.repository.AppointmentDao;
+import com.hendisantika.onlinebanking.service.AppointmentService;
+
+import lombok.RequiredArgsConstructor;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,6 +27,9 @@ import java.util.List;
 public class AppointmentServiceImpl implements AppointmentService {
 
     private final AppointmentDao appointmentDao;
+    
+
+
 
     public Appointment createAppointment(Appointment appointment) {
         return appointmentDao.save(appointment);
@@ -41,4 +48,11 @@ public class AppointmentServiceImpl implements AppointmentService {
         appointment.setConfirmed(true);
         appointmentDao.save(appointment);
     }
+
+	@Override
+	public List<Appointment> findByUser(User user) {
+		   return appointmentDao.findByUser(user);
+	}
+
+
 }

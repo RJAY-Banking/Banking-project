@@ -1,6 +1,8 @@
 package com.hendisantika.onlinebanking.repository;
 
 import com.hendisantika.onlinebanking.entity.Appointment;
+import com.hendisantika.onlinebanking.entity.User;
+
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -18,4 +20,6 @@ import java.util.List;
 public interface AppointmentDao extends CrudRepository<Appointment, Long> {
 
     List<Appointment> findAll();
+    
+    List<Appointment> findByUser(User user);
 }

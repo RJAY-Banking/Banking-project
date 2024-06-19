@@ -1,10 +1,10 @@
 package com.hendisantika.onlinebanking.controller;
 
-import com.hendisantika.onlinebanking.entity.Appointment;
-import com.hendisantika.onlinebanking.entity.User;
-import com.hendisantika.onlinebanking.service.AppointmentService;
-import com.hendisantika.onlinebanking.service.UserService;
-import lombok.RequiredArgsConstructor;
+import java.security.Principal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.security.Principal;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import com.hendisantika.onlinebanking.entity.Appointment;
+import com.hendisantika.onlinebanking.entity.User;
+import com.hendisantika.onlinebanking.service.AppointmentService;
+import com.hendisantika.onlinebanking.service.UserService;
+
+import lombok.RequiredArgsConstructor;
 
 /**
  * Created by IntelliJ IDEA.
@@ -59,6 +61,10 @@ public class AppointmentController {
 
         return "redirect:/userFront";
     }
+    
+    
+
+
 
 
 }
