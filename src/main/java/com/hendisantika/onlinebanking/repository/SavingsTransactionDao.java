@@ -20,5 +20,7 @@ public interface SavingsTransactionDao extends CrudRepository<SavingsTransaction
 
     List<SavingsTransaction> findAll();
     
+    List<SavingsTransaction> findByUsername(String username);
+    
 
 }

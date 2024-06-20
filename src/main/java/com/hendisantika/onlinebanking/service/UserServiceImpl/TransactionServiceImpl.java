@@ -148,6 +148,15 @@ public class TransactionServiceImpl implements TransactionService {
         }
     }
     
+
+
+    public List<PrimaryTransaction> findPrimaryTransactionLists(String username) {
+        return primaryTransactionDao.findByUsername(username);
+    }
+
+    public List<SavingsTransaction> findSavingsTransactionLists(String username) {
+        return savingsTransactionDao.findByUsername(username);
+    }
     
 
     

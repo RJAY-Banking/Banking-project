@@ -18,4 +18,6 @@ import java.util.List;
 public interface PrimaryTransactionDao extends CrudRepository<PrimaryTransaction, Long> {
 
     List<PrimaryTransaction> findAll();
+    
+    List<PrimaryTransaction> findByUsername(String username);
 }
